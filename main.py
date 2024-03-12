@@ -8,7 +8,7 @@ from packages.schema.weather_schema import weather_schema, zipped_columns
 
 
 def main():
-    kafka_bootstrap_servers = "172.19.44.149:9092"
+    kafka_bootstrap_servers = "localhost:9092"
     spark = (SparkSession.builder.appName("weather_processor")
              .config("spark.driver.memory", "6g")
              .config("spark.executor.memory", "6g")
